@@ -42,13 +42,28 @@ cert-manager will issue a Let's Encrypt cert into the `tracker-tls` secret on fi
 
 ## Updates
 
+Pushes to `master` (or `main`) trigger `.github/workflows/deploy.yml`, which:
+
+1. builds + pushes `registry.sviniabanditka.com/tracker:<sha>` and `:latest`,
+2. SSHes into `ssh.sviniabanditka.com` and runs `kubectl set image deployment/tracker app=...:<sha>` followed by `rollout status`.
+
+Required GitHub secrets (Settings → Secrets and variables → Actions):
+
+| Name | Used for |
+|---|---|
+| `REGISTRY_USERNAME` | login to `registry.sviniabanditka.com` |
+| `REGISTRY_PASSWORD` | login to `registry.sviniabanditka.com` |
+| `SSH_PRIVATE_KEY`   | root SSH key for `ssh.sviniabanditka.com` |
+
+For a manual hot-fix deploy without going through CI:
+
 ```bash
 ./deploy/build-push.sh
 kubectl -n tracker rollout restart deploy/tracker
 kubectl -n tracker rollout status deploy/tracker
 ```
 
-`imagePullPolicy: Always` + `rollout restart` is enough because we push the `:latest` tag. If you want immutable tags, pass a SHA: `./deploy/build-push.sh "$(git rev-parse --short HEAD)"` and bump the image in `deployment.yaml`.
+`imagePullPolicy: Always` + `rollout restart` is enough because we push the `:latest` tag.
 
 ## Notes
 

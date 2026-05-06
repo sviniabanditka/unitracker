@@ -1,5 +1,6 @@
 .DS_Store
 *.log
+docs/
 
 # Env files (never commit secrets)
 .env

@@ -1,0 +1,45 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main, master]
+
+env:
+  REGISTRY: registry.sviniabanditka.com
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Login to registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Build and push Tracker
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./deploy/Dockerfile
+          push: true
+          build-args: |
+            VERSION=${{ github.sha }}
+          tags: ${{ env.REGISTRY }}/tracker:${{ github.sha }},${{ env.REGISTRY }}/tracker:latest
+
+      - name: Deploy to k3s
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ssh.sviniabanditka.com
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 10m
+          script: |
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+            export TAG=${{ github.sha }}
+            export REGISTRY=${{ env.REGISTRY }}
+            kubectl -n tracker set image deployment/tracker app=${REGISTRY}/tracker:${TAG}
+            kubectl -n tracker rollout status deployment/tracker --timeout=300s
