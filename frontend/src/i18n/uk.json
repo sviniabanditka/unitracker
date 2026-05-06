@@ -1,0 +1,222 @@
+{
+  "app": {
+    "name": "Tracker"
+  },
+  "common": {
+    "save": "Зберегти",
+    "saving": "Збереження…",
+    "cancel": "Скасувати",
+    "delete": "Видалити",
+    "edit": "Редагувати",
+    "create": "Створити",
+    "loading": "Завантаження…",
+    "back": "Назад",
+    "yes": "Так",
+    "no": "Ні",
+    "actions": "Дії",
+    "none": "Немає",
+    "showDeleted": "Показати видалені",
+    "discard": "Відхилити зміни",
+    "confirm": "Підтвердити",
+    "close": "Закрити",
+    "retry": "Спробувати знову"
+  },
+  "auth": {
+    "login": "Увійти",
+    "loggingIn": "Вхід…",
+    "logout": "Вийти",
+    "username": "Логін",
+    "password": "Пароль",
+    "newPassword": "Новий пароль",
+    "currentPassword": "Поточний пароль",
+    "loginFailed": "Не вдалося увійти",
+    "changePassword": "Змінити пароль",
+    "passwordChanged": "Пароль оновлено."
+  },
+  "nav": {
+    "home": "Головна",
+    "trackers": "Трекери",
+    "profiles": "Профілі",
+    "account": "Акаунт",
+    "users": "Користувачі",
+    "backups": "Бекапи",
+    "settings": "Налаштування",
+    "admin": "Адмін",
+    "addEntry": "Додати запис",
+    "menu": "Меню",
+    "openMenu": "Відкрити меню",
+    "closeMenu": "Закрити меню"
+  },
+  "dashboard": {
+    "title": "Головна",
+    "today": "Сьогодні",
+    "noEntriesToday": "Сьогодні ще немає записів.",
+    "lastPerTracker": "Останній запис у трекері",
+    "noEntriesYet": "Записів ще немає",
+    "quickAdd": "Швидко додати",
+    "quickAddNone": "Додайте кілька записів, щоб з'явилися швидкі дії."
+  },
+  "trackers": {
+    "title": "Трекери",
+    "new": "Новий трекер",
+    "edit": "Редагувати трекер",
+    "name": "Назва",
+    "icon": "Іконка",
+    "color": "Колір",
+    "description": "Опис",
+    "schema": "Схема",
+    "fields": "Поля",
+    "addField": "Додати поле",
+    "deleteTracker": "Видалити трекер",
+    "archived": "Архів",
+    "archive": "Архівувати",
+    "unarchive": "Відновити з архіву",
+    "noTrackers": "Поки що немає трекерів.",
+    "noActiveProfileAdmin": "Створіть або виберіть профіль, щоб керувати його трекерами.",
+    "open": "Відкрити",
+    "cloneFromLibrary": "Клонувати з бібліотеки",
+    "searchLibrary": "Пошук трекерів",
+    "noLibraryItems": "У бібліотеці поки немає трекерів.",
+    "libraryDialogTitle": "Виберіть трекер для клонування"
+  },
+  "entries": {
+    "add": "Додати запис",
+    "edit": "Редагувати запис",
+    "showDeleted": "Показати видалені",
+    "noEntries": "Немає записів.",
+    "deleted": "Видалено",
+    "restore": "Відновити",
+    "history": "Історія",
+    "from": "З",
+    "to": "По",
+    "loadMore": "Більше"
+  },
+  "profiles": {
+    "title": "Профілі",
+    "add": "Додати профіль",
+    "name": "Назва",
+    "descriptionLabel": "Опис",
+    "avatarUrl": "Посилання на аватар",
+    "delete": "Видалити профіль",
+    "noProfiles": "Поки що немає профілів.",
+    "switcher": "Активний профіль",
+    "switcherAll": "Усі профілі",
+    "noAccess": "У вас немає доступу до жодного профілю. Зверніться до адміністратора."
+  },
+  "users": {
+    "title": "Користувачі",
+    "add": "Додати користувача",
+    "username": "Логін",
+    "role": "Роль",
+    "roleAdmin": "Адмін",
+    "roleUser": "Користувач",
+    "delete": "Видалити користувача",
+    "resetPassword": "Скинути пароль",
+    "manageProfiles": "Керувати профілями",
+    "manageProfilesTitle": "Профілі для {username}",
+    "profilesGranted": "Доступних профілів: {n}",
+    "adminHasAllProfiles": "Адмін має доступ до всіх профілів"
+  },
+  "backups": {
+    "title": "Бекапи",
+    "create": "Створити снапшот",
+    "creating": "Створення…",
+    "restoring": "Відновлення…",
+    "restore": "Відновити",
+    "download": "Завантажити",
+    "delete": "Видалити снапшот",
+    "type": "Тип",
+    "createdAt": "Створено",
+    "size": "Розмір",
+    "note": "Нотатка"
+  },
+  "settings": {
+    "title": "Налаштування",
+    "sectionBackups": "Бекапи",
+    "sectionGeneral": "Загальні",
+    "backupIntervalHours": "Інтервал бекапу (годин)",
+    "backupIntervalHoursHelp": "Як часто робляться автоматичні снапшоти (мінімум 0.05 = 3 хвилини).",
+    "backupRetentionCount": "Скільки бекапів зберігати",
+    "backupRetentionCountHelp": "Кількість автоматичних снапшотів, які зберігаються.",
+    "appName": "Назва застосунку",
+    "appNameHelp": "Показується у шапці та на екрані входу.",
+    "defaultLocale": "Локаль за замовчуванням",
+    "defaultLocaleHelp": "Попередньо вибрана мова на екрані входу.",
+    "saveChanges": "Зберегти зміни",
+    "discardChanges": "Скасувати зміни",
+    "noChanges": "Немає змін."
+  },
+  "account": {
+    "title": "Профіль",
+    "yourAccount": "Ваш обліковий запис",
+    "changePassword": "Змінити пароль"
+  },
+  "validation": {
+    "required": "Обовʼязкове поле",
+    "min": "Мінімальне значення — {min}",
+    "max": "Максимальне значення — {max}",
+    "minLength": "Мінімальна довжина — {min}",
+    "maxLength": "Максимальна довжина — {max}"
+  },
+  "errors": {
+    "auth.unauthorized": "Будь ласка, увійдіть.",
+    "auth.forbidden": "Доступ заборонено.",
+    "validation.failed": "Перевірка не пройдена.",
+    "validation.required": "Обовʼязкове поле.",
+    "not_found": "Не знайдено.",
+    "conflict": "Конфлікт.",
+    "maintenance": "Сервер оновлюється, зачекайте…",
+    "internal": "Помилка серверу. Спробуйте ще раз.",
+    "unknown": "Щось пішло не так."
+  },
+  "pwa": {
+    "updateAvailable": "Доступна нова версія.",
+    "reload": "Перезавантажити",
+    "offlineReady": "Застосунок готовий до офлайн-роботи."
+  },
+  "theme": {
+    "toggleLight": "Перейти на світлу тему",
+    "toggleDark": "Перейти на темну тему"
+  },
+  "locale": {
+    "label": "Мова",
+    "en": "English",
+    "uk": "Українська"
+  },
+  "maintenance": {
+    "title": "Сервер оновлюється",
+    "description": "Скоро повернемось."
+  },
+  "charts": {
+    "title": "Графіки",
+    "entryCount": "Записи за {bucket}",
+    "hourOfDay": "Час доби",
+    "calendarHeatmap": "Календар (останній рік)",
+    "noData": "Немає даних у цьому діапазоні.",
+    "bucket": {
+      "label": "Інтервал",
+      "day": "День",
+      "week": "Тиждень",
+      "month": "Місяць"
+    },
+    "range": {
+      "label": "Період",
+      "7d": "7 днів",
+      "30d": "30 днів",
+      "90d": "90 днів",
+      "1y": "1 рік",
+      "custom": "Вручну"
+    },
+    "aggregation": {
+      "sum": "Сума",
+      "avg": "Середнє",
+      "min": "Мін",
+      "max": "Макс",
+      "count": "К-сть"
+    },
+    "boolean": {
+      "true": "Так",
+      "false": "Ні"
+    }
+  }
+}

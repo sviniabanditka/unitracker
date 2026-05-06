@@ -1,0 +1,30 @@
+.DS_Store
+*.log
+
+# Env files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Local data volume (created by docker-compose)
+deploy/data/
+
+# Real k8s Secret manifest (template lives in secret.example.yaml)
+deploy/k8s/secret.yaml
+
+# Backend
+backend/internal/http/dist/*
+!backend/internal/http/dist/.gitkeep
+!backend/internal/http/dist/index.html
+.data
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.tmp/
+frontend/*.tsbuildinfo
+
+# Editor
+.idea/
+.vscode/
+*.swp

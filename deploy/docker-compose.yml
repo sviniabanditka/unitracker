@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: baby-tracker:dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    environment:
+      SESSION_SECRET: ${SESSION_SECRET:-changeme-change-me-please-32-bytes}
+      INITIAL_ADMIN_USERNAME: ${INITIAL_ADMIN_USERNAME:-}
+      INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD:-}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      TZ: ${TZ:-UTC}
+    restart: unless-stopped

@@ -1,0 +1,222 @@
+{
+  "app": {
+    "name": "Tracker"
+  },
+  "common": {
+    "save": "Save",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "loading": "Loading…",
+    "back": "Back",
+    "yes": "Yes",
+    "no": "No",
+    "actions": "Actions",
+    "none": "None",
+    "showDeleted": "Show deleted",
+    "discard": "Discard",
+    "confirm": "Confirm",
+    "close": "Close",
+    "retry": "Retry"
+  },
+  "auth": {
+    "login": "Sign in",
+    "loggingIn": "Signing in…",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "newPassword": "New password",
+    "currentPassword": "Current password",
+    "loginFailed": "Login failed",
+    "changePassword": "Change password",
+    "passwordChanged": "Password updated."
+  },
+  "nav": {
+    "home": "Home",
+    "trackers": "Trackers",
+    "profiles": "Profiles",
+    "account": "Account",
+    "users": "Users",
+    "backups": "Backups",
+    "settings": "Settings",
+    "admin": "Admin",
+    "addEntry": "Add entry",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "today": "Today",
+    "noEntriesToday": "No entries today yet.",
+    "lastPerTracker": "Last entry per tracker",
+    "noEntriesYet": "No entries yet",
+    "quickAdd": "Quick add",
+    "quickAddNone": "Add a few entries to populate quick-add."
+  },
+  "trackers": {
+    "title": "Trackers",
+    "new": "New tracker",
+    "edit": "Edit tracker",
+    "name": "Name",
+    "icon": "Icon",
+    "color": "Color",
+    "description": "Description",
+    "schema": "Schema",
+    "fields": "Fields",
+    "addField": "Add field",
+    "deleteTracker": "Delete tracker",
+    "archived": "Archived",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "noTrackers": "No trackers yet.",
+    "noActiveProfileAdmin": "Pick or create a profile to manage its trackers.",
+    "open": "Open",
+    "cloneFromLibrary": "Clone from library",
+    "searchLibrary": "Search trackers",
+    "noLibraryItems": "No trackers in library yet.",
+    "libraryDialogTitle": "Pick a tracker to clone"
+  },
+  "entries": {
+    "add": "Add entry",
+    "edit": "Edit entry",
+    "showDeleted": "Show deleted",
+    "noEntries": "No entries.",
+    "deleted": "Deleted",
+    "restore": "Restore",
+    "history": "History",
+    "from": "From",
+    "to": "To",
+    "loadMore": "Load more"
+  },
+  "profiles": {
+    "title": "Profiles",
+    "add": "Add profile",
+    "name": "Name",
+    "descriptionLabel": "Description",
+    "avatarUrl": "Avatar URL",
+    "delete": "Delete profile",
+    "noProfiles": "No profiles yet.",
+    "switcher": "Active profile",
+    "switcherAll": "All profiles",
+    "noAccess": "You have no access to any profile. Ask an administrator."
+  },
+  "users": {
+    "title": "Users",
+    "add": "Add user",
+    "username": "Username",
+    "role": "Role",
+    "roleAdmin": "Admin",
+    "roleUser": "User",
+    "delete": "Delete user",
+    "resetPassword": "Reset password",
+    "manageProfiles": "Manage profiles",
+    "manageProfilesTitle": "Profiles for {username}",
+    "profilesGranted": "{n} profiles granted",
+    "adminHasAllProfiles": "Admin has access to all profiles"
+  },
+  "backups": {
+    "title": "Backups",
+    "create": "Create snapshot",
+    "creating": "Creating…",
+    "restoring": "Restoring…",
+    "restore": "Restore",
+    "download": "Download",
+    "delete": "Delete snapshot",
+    "type": "Type",
+    "createdAt": "Created at",
+    "size": "Size",
+    "note": "Note"
+  },
+  "settings": {
+    "title": "Settings",
+    "sectionBackups": "Backups",
+    "sectionGeneral": "General",
+    "backupIntervalHours": "Backup interval (hours)",
+    "backupIntervalHoursHelp": "How often automatic snapshots are taken (minimum 0.05 = 3 minutes).",
+    "backupRetentionCount": "Backup retention",
+    "backupRetentionCountHelp": "Number of automatic snapshots to keep.",
+    "appName": "App name",
+    "appNameHelp": "Shown in the header and on the login page.",
+    "defaultLocale": "Default locale",
+    "defaultLocaleHelp": "Preselected language on the login page.",
+    "saveChanges": "Save changes",
+    "discardChanges": "Discard changes",
+    "noChanges": "No changes."
+  },
+  "account": {
+    "title": "Account",
+    "yourAccount": "Your account",
+    "changePassword": "Change password"
+  },
+  "validation": {
+    "required": "This field is required",
+    "min": "Minimum value is {min}",
+    "max": "Maximum value is {max}",
+    "minLength": "Minimum length is {min}",
+    "maxLength": "Maximum length is {max}"
+  },
+  "errors": {
+    "auth.unauthorized": "Please sign in.",
+    "auth.forbidden": "Permission denied.",
+    "validation.failed": "Validation failed.",
+    "validation.required": "This field is required.",
+    "not_found": "Not found.",
+    "conflict": "Conflict.",
+    "maintenance": "Server is updating, please wait…",
+    "internal": "Server error. Please try again.",
+    "unknown": "Something went wrong."
+  },
+  "pwa": {
+    "updateAvailable": "A new version is available.",
+    "reload": "Reload",
+    "offlineReady": "App ready to work offline."
+  },
+  "theme": {
+    "toggleLight": "Switch to light theme",
+    "toggleDark": "Switch to dark theme"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "uk": "Українська"
+  },
+  "maintenance": {
+    "title": "Server is updating",
+    "description": "We'll be back in a moment."
+  },
+  "charts": {
+    "title": "Charts",
+    "entryCount": "Entries per {bucket}",
+    "hourOfDay": "Hour of day",
+    "calendarHeatmap": "Calendar (last year)",
+    "noData": "No data in this range.",
+    "bucket": {
+      "label": "Bucket",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month"
+    },
+    "range": {
+      "label": "Range",
+      "7d": "7 days",
+      "30d": "30 days",
+      "90d": "90 days",
+      "1y": "1 year",
+      "custom": "Custom"
+    },
+    "aggregation": {
+      "sum": "Sum",
+      "avg": "Avg",
+      "min": "Min",
+      "max": "Max",
+      "count": "Count"
+    },
+    "boolean": {
+      "true": "Yes",
+      "false": "No"
+    }
+  }
+}
