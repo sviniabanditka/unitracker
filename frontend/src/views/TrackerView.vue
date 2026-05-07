@@ -271,32 +271,36 @@ onMounted(init)
         <p v-if="tracker.description" class="text-sm text-muted-foreground">{{ tracker.description }}</p>
 
         <section class="rounded-lg border bg-card p-5 space-y-3">
-          <div class="flex flex-wrap items-end gap-3">
-            <div class="space-y-1">
-              <Label for="filter-from">{{ $t('entries.from') }}</Label>
-              <Input id="filter-from" type="date" v-model="fromDate" />
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-wrap items-end gap-3">
+              <div class="space-y-1 flex-1 min-w-40 sm:flex-none sm:w-44">
+                <Label for="filter-from">{{ $t('entries.from') }}</Label>
+                <Input id="filter-from" type="date" v-model="fromDate" />
+              </div>
+              <div class="space-y-1 flex-1 min-w-40 sm:flex-none sm:w-44">
+                <Label for="filter-to">{{ $t('entries.to') }}</Label>
+                <Input id="filter-to" type="date" v-model="toDate" />
+              </div>
+              <Button
+                v-if="fromDate || toDate"
+                type="button"
+                variant="outline"
+                size="sm"
+                @click="fromDate = ''; toDate = ''"
+              >
+                {{ $t('common.cancel') }}
+              </Button>
             </div>
-            <div class="space-y-1">
-              <Label for="filter-to">{{ $t('entries.to') }}</Label>
-              <Input id="filter-to" type="date" v-model="toDate" />
-            </div>
-            <Button
-              v-if="fromDate || toDate"
-              type="button"
-              variant="outline"
-              size="sm"
-              @click="fromDate = ''; toDate = ''"
-            >
-              {{ $t('common.cancel') }}
-            </Button>
-            <div class="flex items-center gap-2 ml-2">
-              <Switch id="show-deleted" v-model="showDeleted" />
-              <Label for="show-deleted" class="cursor-pointer">{{ $t('entries.showDeleted') }}</Label>
-            </div>
-            <div class="ml-auto">
+
+            <div class="flex flex-wrap items-center gap-3">
+              <div class="flex items-center gap-2">
+                <Switch id="show-deleted" v-model="showDeleted" />
+                <Label for="show-deleted" class="cursor-pointer">{{ $t('entries.showDeleted') }}</Label>
+              </div>
               <Button
                 v-if="!showAddForm && editingId == null && !tracker.is_archived"
                 type="button"
+                class="ml-auto"
                 @click="openAddForm"
               >
                 + {{ $t('entries.add') }}

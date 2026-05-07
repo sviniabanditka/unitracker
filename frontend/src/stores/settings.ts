@@ -34,6 +34,14 @@ export const useSettingsStore = defineStore('settings', () => {
     return inflight
   }
 
+  async function loadPublicInfo() {
+    try {
+      applyPublicInfo(await settingsApi.publicInfo())
+    } catch {
+      // best-effort: keep DEFAULTS / previously loaded values
+    }
+  }
+
   async function save(changes: SettingsMap) {
     saving.value = true
     try {
@@ -62,6 +70,7 @@ export const useSettingsStore = defineStore('settings', () => {
     backupIntervalHours,
     backupRetentionCount,
     fetchAll,
+    loadPublicInfo,
     save,
     applyPublicInfo,
     reset,

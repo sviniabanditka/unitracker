@@ -44,6 +44,7 @@ onBeforeUnmount(() => {
 watch(
   () => me.value?.role,
   role => {
+    void settings.loadPublicInfo()
     if (role === 'admin' && !settings.loaded) {
       settings.fetchAll().catch(() => undefined)
     }
@@ -58,6 +59,7 @@ watch(defaultLocale, (next, prev) => {
 })
 
 onMounted(() => {
+  void settings.loadPublicInfo()
   if (isAdmin.value && !settings.loaded) {
     settings.fetchAll().catch(() => undefined)
   }
